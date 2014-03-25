@@ -108,6 +108,7 @@ configuredBrowserify = (files, config={}) ->
     entries: files and [].concat files
     extensions: config.extension or config.extensions or []
     noParse: config.noParse
+    basedir: config.basedir
   bundle = browserify options
   applyConfig bundle, config
   bundle
